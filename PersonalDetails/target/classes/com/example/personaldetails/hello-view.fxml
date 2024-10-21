@@ -20,7 +20,7 @@
       </TextField>
       <Button layoutX="14.0" layoutY="225.0" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
       <Button layoutX="149.0" layoutY="225.0" mnemonicParsing="false" onAction="#onSubmitButtonClick" text="Submit" />
-      <TextField fx:id="textFieldAge1" layoutX="14.0" layoutY="156.0" prefHeight="33.0" prefWidth="189.0" promptText="Enter your favourite colour ">
+      <TextField fx:id="textFieldColour" layoutX="14.0" layoutY="156.0" prefHeight="33.0" prefWidth="189.0" promptText="Enter your favourite colour ">
          <font>
             <Font size="14.0" />
          </font>

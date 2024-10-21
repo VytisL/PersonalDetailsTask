@@ -36,7 +36,7 @@ public class HelloController {
         labelColor.setText("Enter a color or color hex code");
         textFieldName.setText(null);
         textFieldAge.setText(null);
-        //textFieldColour.setText(null);
+        textFieldColour.setText(null);
     }
 
     @FXML
@@ -62,10 +62,14 @@ public class HelloController {
 
             name = textFieldName.getText();
             age = Integer.parseInt(textFieldAge.getText());
-            /*if(!textFieldColour.getText().trim().isEmpty() || textFieldColour.getText() != null) {
-                color = Color.web(textFieldColour.getText());
+            try {
+                color = color.web(textFieldColour.getText());
+
+            } catch (Exception e) {
+                labelColor.setText("Please enter a real color");
+                textFieldColour.clear();
             }
-*/
+            Display.setStyle("Display-base-color:" + color.toString());
             Display.setText("Hello " + name + "! " + age + " is very old");
             onClearButtonClick();
         }
